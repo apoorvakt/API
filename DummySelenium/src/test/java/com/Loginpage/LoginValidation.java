@@ -27,6 +27,16 @@ public class LoginValidation {
 		
 		//driver.get("www.google.com");
 		}
+	public void Login()
+	{
+		ChromeDriver driver = new ChromeDriver();
+		
+		//Thread.sleep(200);
+		driver.get("http://cafetownsend-angular-rails.herokuapp.com/login");
+		//Thread.sleep(200);
+		driver.findElement(By.xpath(".//input[@ng-model=\"user.name\"]")).sendKeys("Luke");
+		driver.findElement(By.xpath(".//input[@ng-model=\"user.password\"]")).sendKeys("Skywalker");
+		driver.findElement(By.xpath("//button[@class='main-button']")).click();
 	}
-
+}
 
